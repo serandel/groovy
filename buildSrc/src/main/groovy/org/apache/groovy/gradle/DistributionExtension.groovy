@@ -50,7 +50,7 @@ class DistributionExtension {
                                 "src/main/java/${className.replace('.', '/')}.java"
                         ).asFile
                         docgen.inputs.file(src).withPathSensitivity(PathSensitivity.RELATIVE)
-                        src.absolutePath // TODO relative path
+                        project.rootDir.relativePath(src)
                     }
             )
         }
